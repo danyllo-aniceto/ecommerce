@@ -1,0 +1,16 @@
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+npx --no-install &&
+
+echo "*** Checagem de lint ***" &&
+
+npx eslint src &&
+
+echo "*** Finalizado checagem de lint ***" &&
+
+echo "*** Checagem de tipos ***" &&
+
+npx tsc --noEmit --skipLibCheck &&
+
+echo "*** Finalizado checagem de tipos ***"
